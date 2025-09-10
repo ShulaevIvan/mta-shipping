@@ -337,9 +337,12 @@ textarea {
 .service-list-about ul li {
     margin-bottom: 10px;
 }
+.tm-service-media img {
+    max-width: 160px;
+    border-radius: 5px;
+}
 @media (max-width: 768px) {
     .tm-row { flex-direction: column; }
-
     .tm-col-left,
     .tm-col-right,
     .tm-bg-left,
@@ -399,3 +402,9 @@ textarea {
     .tm-service-img { margin-right: 0; }
     .tm-service-img-r { margin-left: 0; }
 }
+@media (max-width: 1024px) {
+    .tm-service-media img {
+        order: 1;
+    }
+}
+
