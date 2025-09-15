@@ -34,7 +34,7 @@ p { line-height: 1.9; }
     border-radius: 0;
     transform: skewX(-15deg);
     background-color: rgba(0,0,0,0.6);
-    color: white;    
+    color: white;   
 }
 
 .navbar-toggler i { transform: skewX(15deg); }
@@ -370,6 +370,7 @@ textarea {
     height: 200px;
     filter: brightness(0.5);
     cursor: pointer;
+    border-radius: 10px;
 }
 .flot-item-img-wrap img:hover {
     filter: brightness(1);
@@ -402,7 +403,7 @@ textarea {
     width: 100%;
     max-width: 800px;
     max-height: 800px;
-    background-color: #787878;
+    background-color: rgba(0,0,0,0.8);
     border-radius: 10px;
 }
 .flot-item-popup-close-btn {
@@ -458,12 +459,26 @@ textarea {
     border: 1px solid #ddd;
     justify-content: space-between;
 }
-.flot-item-popup-stats-title {
-    font-weight: 500;
-    color: #000;
+
+@media (max-width: 1300px) {
+    .flot-wrap {
+        flex-direction: column;
+    }
+    .flot-item-wrap {
+        max-width: 100%;
+        width: 100%;
+    }
 }
-.flot-item-popup-stats-row:nth-child(odd) {
-    font-weight: 500;
+@media (max-width: 460px) {
+    .flot-item-popup-wrap {
+        position: fixed;
+        width: 100vw;
+        height: 150vh;
+        max-height: 100vh;
+    }
+    .flot-item-popup-close-btn {
+        right: 5%;
+    }
 }
 
 
@@ -481,6 +496,7 @@ textarea {
         top: 50px;
         right: 40px;
         padding-bottom: 0;
+        z-index: 11;
     }  
     
     .tm-bg { flex-direction: column; }
